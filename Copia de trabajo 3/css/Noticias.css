@@ -1,0 +1,192 @@
+/* Estilos generales para las cards */
+.card {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    padding: 10px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+
+
+.card-content {
+    height: 200px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.card-expanded {
+    position: absolute;
+    top: 120px; /* Ajusta este valor según la altura de tu navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    width: calc(100% - 20px); /* Resta el margen lateral */
+    height: auto;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    margin: 1px; /* Margen de 10 píxeles en todos los lados */
+}
+
+.card-expanded .card-content {
+    height: auto;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}
+
+.card-footer button {
+    background-color: #054c09;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.card-footer button:hover {
+    background-color: gold;
+    color: black;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-expanded .card-img-top {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+/* Estilos para el resumen del texto */
+.card-text-summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Estilos para los contenedores */
+.row.mb-4 > .col-12 > .p-4,
+.row.mb-4.d-flex.align-items-stretch > .col-md-6 > .p-4 {
+    background-color: #054c09;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales del logo */
+.navbar-brand img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Botones flotantes de redes sociales */
+.social-icons {
+    position: fixed; /* Mantener en posición fija por defecto */
+    right: 10px; /* Espacio desde el borde derecho de la pantalla */
+    top: 40%; /* Alineado verticalmente al centro */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los íconos */
+    z-index: 1000; /* Asegura que estén encima de otros elementos */
+}
+
+/* Estilo base para los íconos redondos */
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; /* Hacer los íconos redondos */
+    background-color: #3b5998; /* Color de fondo inicial (Facebook) */
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el color cuando se pasa el cursor por encima */
+.social-icons a:hover {
+    background-color: #555; /* Color al pasar el cursor */
+}
+
+/* Iconos de redes sociales específicos */
+.facebook {
+    background-color: #3b5998; /* Facebook */
+}
+
+.instagram {
+    background-color: #e4405f; /* Instagram */
+}
+
+/* Estilos responsivos */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 100px;
+    }
+
+    .social-icons {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .card h6 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-brand img {
+        max-width: 120px;
+    }
+
+    .social-icons {
+        right: 10px;
+        top: 40%;
+    }
+
+    .social-icons a {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar-brand img {
+        max-width: 140px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .navbar-brand img {
+        max-width: 150px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .navbar-brand img {
+        max-width: 180px;
+    }
+
+}

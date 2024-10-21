@@ -1,0 +1,246 @@
+/* Estilos para los contenedores específicos */
+.row.mb-4 > .col-12 > .p-4,
+.row.mb-4.d-flex.align-items-stretch > .col-md-6 > .p-4,
+.row.mb-4 > .col-12 > .p-4 {
+    background-color: #0B2538; 
+    padding: 2rem; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.valores-background-color{
+        background-color: #0B2538;
+
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.15s ease; /* Menor tiempo para box-shadow */
+}
+
+
+/* Estilos generales del logo */
+.navbar-brand img {
+    max-width: 150px;  /* Tamaño estándar del logo */
+    height: auto;      /* Mantiene la proporción */
+}
+
+
+
+/* Botones flotantes de redes sociales */
+.social-icons {
+    position: fixed; 
+    right: 10px; 
+    top: 40%; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    z-index: 1000; 
+}
+
+/* Estilo base para los íconos redondos */
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; 
+    background-color: #3b5998; 
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el color cuando se pasa el cursor por encima */
+.social-icons a:hover {
+    background-color: #555; /* Color al pasar el cursor */
+}
+
+/* Iconos de redes sociales específicos */
+.facebook {
+    background-color: #3b5998; 
+}
+
+.instagram {
+    background-color: #e4405f; 
+}
+
+/* Animación de entrada */
+.fade-in {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: slide-in 3s forwards; 
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* Aplica animación a los contenedores que entran desde la izquierda */
+.fade-in-left {
+    animation: slide-in-left 3s forwards; 
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-20px); 
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0); 
+        
+    }
+}
+
+/* Aplica animación a los contenedores que entran desde la derecha */
+.fade-in-right {
+    animation: slide-in-right 3s forwards; 
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0; 
+        transform: translateX(20px); 
+    }
+    to {
+        opacity: 1; 
+        transform: translateX(0); 
+    }
+}
+
+/* Tarjetas con efecto hover */
+.card:hover {
+    transform: scale(1.05) !important; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; 
+}
+
+
+
+.text-white {
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.list-unstyled {
+    color: white; /* Asegura que el texto sea blanco */
+}
+
+
+
+/* Estilos responsivos */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 100px; /* Logo más pequeño en móviles */
+    }
+
+    .social-icons {
+        position: static; /* Colocar debajo de las tarjetas */
+        flex-direction: row; /* Íconos en fila */
+        justify-content: center;
+        margin-top: 10px; /* Espacio superior para separación */
+        margin-bottom: 20px; /* Espacio inferior para separación */
+    }
+
+    .social-icons a {
+        width: 40px; /* Iconos más pequeños */
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .card {
+        height: auto; /* Permitir que las tarjetas se ajusten automáticamente */
+        max-width: 100%; /* Asegura que las tarjetas no se desborden */
+        overflow: hidden; /* Ocultar cualquier contenido que sobresalga */
+        padding: 10px; /* Reducir el padding en móviles */
+    }
+
+    .card h6 {
+        font-size: 12px; /* Tamaño de texto más pequeño */
+    }
+}
+
+/* Media query para pantallas específicas como el iPhone 5 */
+@media (min-width: 320px) and (max-width: 640px) and (max-height: 1136px) {
+    .navbar-brand img {
+        max-width: 100px; /* Logo más pequeño en móviles */
+    }
+
+    .social-icons {
+        position: static; /* Colocar debajo de las tarjetas */
+        flex-direction: row; /* Íconos en fila */
+        justify-content: center;
+        margin-top: 10px; /* Espacio superior para separación */
+        margin-bottom: 20px; /* Espacio inferior para separación */
+    }
+
+    .social-icons a {
+        width: 40px; /* Iconos más pequeños */
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 10px; /* Reducir el padding para mejor ajuste */
+        margin: 0; /* Evitar márgenes que causen desbordamiento */
+    }
+
+    .card h6 {
+        font-size: 12px; /* Tamaño de texto más pequeño */
+    }
+}
+
+/* Pantallas medianas (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-brand img {
+        max-width: 120px; /* Tamaño del logo en tablets */
+    }
+
+    .social-icons {
+        right: 10px; /* Mantener el posicionamiento fijo */
+        top: 40%; /* Alineado vertical */
+    }
+
+    .social-icons a {
+        width: 45px; /* Iconos un poco más grandes */
+        height: 45px;
+        line-height: 45px;
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 15px; /* Ajustar el padding en tablets */
+    }
+}
+
+/* Pantallas grandes (desktops medianos) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .navbar-brand img {
+        max-width: 140px; /* Logo para laptops/desktops medianos */
+    }
+
+    .card {
+        padding: 20px; /* Mantener el padding estándar en pantallas medianas */
+    }
+}
+
+/* Pantallas grandes (desktops grandes) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    .navbar-brand img {
+        max-width: 150px; /* Tamaño estándar en desktops grandes */
+    }
+}
+
+/* Pantallas muy grandes (desktops amplios) */
+@media (min-width: 1201px) {
+    .navbar-brand img {
+        max-width: 180px; /* Tamaño más grande en pantallas muy grandes */
+    }
+}
+

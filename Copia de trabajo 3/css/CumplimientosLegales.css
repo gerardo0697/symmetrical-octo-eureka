@@ -1,0 +1,168 @@
+/* Estilos generales del logo */
+.navbar-brand img {
+    max-width: 150px;  /* Tamaño estándar del logo */
+    height: auto;      /* Mantiene la proporción */
+}
+
+/* Botones flotantes de redes sociales */
+.social-icons {
+    position: fixed; /* Mantener en posición fija por defecto */
+    right: 10px; /* Espacio desde el borde derecho de la pantalla */
+    top: 40%; /* Alineado verticalmente al centro */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre los íconos */
+    z-index: 1000; /* Asegura que estén encima de otros elementos */
+}
+
+/* Estilo base para los íconos redondos */
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%; /* Hacer los íconos redondos */
+    background-color: #3b5998; /* Color de fondo inicial (Facebook) */
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    transition: background-color 0.3s;
+}
+
+/* Cambiar el color cuando se pasa el cursor por encima */
+.social-icons a:hover {
+    background-color: #555; /* Color al pasar el cursor */
+}
+
+/* Iconos de redes sociales específicos */
+.facebook {
+    background-color: #3b5998; /* Facebook */
+}
+
+.instagram {
+    background-color: #e4405f; /* Instagram */
+}
+
+/* Estilos de las cards (tarjetas) */
+/* Estilos de las cards (tarjetas) */
+.pdf-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pdf-card {
+    background-color: #3b5998;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Flex para alinear contenido en columna */
+    justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pdf-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-card embed {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px; /* Espacio entre el PDF y el botón */
+}
+
+.pdf-card button {
+    background-color: #054c09;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-card button:hover {
+    background-color: #04680d;
+}
+
+/* Estilos del visor PDF (modal) */
+.pdf-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 900px;
+    height: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.pdf-modal iframe {
+    width: 100%;
+    height: 85%;
+    border-radius: 8px;
+    border: none;
+}
+
+.pdf-modal .close-pdf {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-modal .close-pdf:hover {
+    background-color: #c9302c;
+}
+
+.pdf-modal .download-pdf {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-modal .download-pdf:hover {
+    background-color: #449d44;
+}
+
+/* Fondo oscuro detrás de la modal */
+.pdf-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 900;
+    display: none;
+}
+
+h3 {
+    color: white;
+}
